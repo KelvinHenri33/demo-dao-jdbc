@@ -34,11 +34,17 @@ public class Main {
         for (Seller obj: list){
             System.out.println(obj);
         }
-        
+
         System.out.println("=== TEST 4: seller Insert  ==== ");
         Seller newSeller = new Seller(null,"Greg", "Greg@gmail.com", new Date(),4000.0, department);
         sellerDao.insert(newSeller);
         System.out.println("Inserted! New Id = " + newSeller.getId() );
+
+        System.out.println("=== TEST 5: seller update  ==== ");
+        seller = sellerDao.findById(1);
+        seller.setName("Marta Wayne");
+        sellerDao.update(seller);
+        System.out.println("Update Completed");
 
     }
 }

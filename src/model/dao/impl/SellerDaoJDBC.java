@@ -85,7 +85,6 @@ public class SellerDaoJDBC implements SellerDao {
         finally {
             DB.closeStatement(st);
         }
-
     }
 
     @Override
@@ -107,11 +106,6 @@ public class SellerDaoJDBC implements SellerDao {
             DB.closeStatement(st);
         }
     }
-
-
-
-
-
 
     @Override
     public Seller findById(Integer id) {
@@ -250,6 +244,5 @@ public class SellerDaoJDBC implements SellerDao {
         dep.setName(rs.getString("DepName"));
         return dep;
     }
-
 
 }
